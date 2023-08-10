@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
@@ -94,18 +95,6 @@ AUTH_USER_MODEL = 'user.Profile'
 DATABASES = {
     'default': dj_database_url.parse(default=os.environ.get('DATABASE_URL'))
 }
-'''DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'testdb_3ymo',
-        'USER': 'testdb_3ymo_user',
-        'PASSWORD': 'fxWHEzgyvOusaWwVQojmjy8bLUNrqmvc',
-        'HOST': 'dpg-cia39v18g3n2q3uuga40-a.oregon-postgres.render.com',
-        #'HOST': 'localhost',
-        'PORT': '5432',
-    }
-}'''
-
 
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
