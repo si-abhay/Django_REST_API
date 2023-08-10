@@ -83,14 +83,28 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'crcs.wsgi.application'
 
+
+#<=========== Custom USER MODEL ===========>
+
 AUTH_USER_MODEL = 'user.Profile'
 
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
 DATABASES = {
-    'default': dj_database_url.config(default=os.environ.get('DATABASE_URL'))
+    'default': dj_database_url.parse(default=os.environ.get('DATABASE_URL'))
 }
+'''DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'testdb_3ymo',
+        'USER': 'testdb_3ymo_user',
+        'PASSWORD': 'fxWHEzgyvOusaWwVQojmjy8bLUNrqmvc',
+        'HOST': 'dpg-cia39v18g3n2q3uuga40-a.oregon-postgres.render.com',
+        #'HOST': 'localhost',
+        'PORT': '5432',
+    }
+}'''
 
 
 # Password validation

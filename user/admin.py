@@ -3,8 +3,8 @@ import openpyxl
 from django.contrib.auth.admin import UserAdmin
 from .models import Profile, Society, Grievance, Request
 from import_export.admin import ImportExportModelAdmin
+import openpyxl
 from import_export import resources
-from django.contrib import admin
 from django.http import HttpResponse
 
 
